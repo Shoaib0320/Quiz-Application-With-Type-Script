@@ -1,0 +1,221 @@
+/* Importing fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #f8f9fa; /* Light gray text color for readability */
+    font-family: 'Garamond', sans-serif; /* Elegant font choice */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #2b2b2b; /* Dark gray background */
+    color: #eaeaea;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Deep shadow for a premium look */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.container:hover {
+    transform: scale(1.03); /* Slight zoom effect on hover */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', sans-serif; /* Elegant font for headings */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #d4af37; /* Gold color for heading */
+    animation: fadeIn 1s ease-out;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    color: #d4af37; /* Gold color for subheading */
+    animation: fadeIn 1s ease-out 0.5s;
+}
+
+p#question {
+    font-family: Garamond;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out 1s;
+}
+
+div {
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-out 1.5s;
+}
+
+input[type="radio"] {
+    accent-color: #d4af37; /* Gold color for radio buttons */
+    margin-right: 10px;
+}
+
+label {
+    font-family: Garamond;
+    font-size: 1.1rem;
+    color: #eaeaea; /* Light gray for labels */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="radio"]:checked + label {
+    color: #d4af37; /* Gold color for selected options */
+    font-weight: bold;
+}
+
+button#btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #d4af37; /* Gold background */
+    border: none;
+    border-radius: 6px;
+    color: #1e1e1e; /* Dark text color for contrast */
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button#btn:disabled {
+    background-color: #666; /* Gray background when disabled */
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+button#btn:hover:not(:disabled) {
+    background-color: #b08b4f; /* Darker gold on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#result {
+    text-align: center;
+    margin-top: 30px;
+    animation: fadeIn 1s ease-out 2s;
+}
+
+#result-text {
+    font-size: 1.6rem;
+    color: #d4af37; /* Gold color for result text */
+}
+
+#result-gif {
+    margin-top: 20px;
+    border-radius: 12px;
+    border: 4px solid #d4af37; /* Gold border */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Deep shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#result-gif:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+#timer {
+    display: flex;
+    justify-content: right;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#navbar{
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #000; /* Deep black background for navbar */
+    border-bottom: 2px solid #d4af37; /* Gold accent */
+    padding: 10px 20px; /* Padding for better spacing */
+}
+
+.navbar-brand {
+    color: #d4af37; /* Gold color for brand */
+    font-family: 'Playfair Display', serif; /* Elegant font for brand */
+    font-size: 1.8rem; /* Larger font size for prominence */
+    font-weight: 700;
+}
+
+.navbar-toggler {
+    border-color: #d4af37; /* Gold border for toggler */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="%23d4af37" class="bi bi-list" viewBox="0 0 16 16"><path d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5zM2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5zM2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5z"/></svg>');
+}
+
+.navbar-nav .nav-link {
+    color: #f8f9fa !important; /* Light text color for links */
+    font-size: 1.1rem;
+    font-weight: 500; /* Medium weight for links */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.navbar-nav .nav-link, .navbar-nav .nav-link:hover {
+    color: #d4af37 !important; /* Gold color on hover */
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.8); /* Glowing effect */
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: #2b2b2b; /* Darker background for dropdown */
+    border: 1px solid #d4af37; /* Gold border for dropdown */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.dropdown-item {
+    color: #f8f9fa; /* Light text color for dropdown items */
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.dropdown-item:hover {
+    background-color: #1e1e1e; /* Darker background on hover */
+    color: #d4af37; /* Gold text color on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0; /* Add vertical padding for mobile view */
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.5rem; /* Smaller font size on extra small screens */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem; /* Slightly smaller font size on extra small screens */
+    }
+}
